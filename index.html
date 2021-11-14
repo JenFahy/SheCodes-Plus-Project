@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Weather app (wk 5)</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css"
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-6 search">Search</div>
+        <div class="col-6 location">Current Location</div>
+      </div>
+
+      <div class="row">
+        <div class="col-6 result"></div>
+        <div class="col-6 time"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-6">
+          <form id="search-form">
+            <input
+              type="text"
+              placeholder="Where to?"
+              autocomplete="off"
+              autofocus="on"
+              id="search-text-input"
+            />
+
+            <input type="submit" id="search" value="Search" />
+          </form>
+        </div>
+
+        <div class="col-6">
+          <button id="current-location">Click here</button>
+
+          <div id="local-weather">
+            <span id="local-temperature">17</span>
+
+            <span class="units">
+              <a href="#" id="celsius-link">°C</a> |
+              <a href="#" id="fahrenheit-link">°F</a></span
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-6 sailboat">⛵</div>
+        <div class="col-6 country">🍁</div>
+      </div>
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <div class="row">
+        <div class="col-6 day-night">🌙</div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <form>
+            <input type="text" placeholder="18°" />
+          </form>
+        </div>
+        <div class="col-6">
+          <div class="card-group">
+            <div class="card">
+              <div class="card-body">
+                <div class="weather-mon">☀</div>
+                <h5 class="card-title">24°<strong>/</strong>16°</h5>
+                <p class="card-text">Mon</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <div class="weather-tues">🌤</div>
+                <h5 class="card-title">23°<strong>/</strong>15°</h5>
+                <p class="card-text">Tues</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <div class="weather-wed">⛅</div>
+                <h5 class="card-title">22°<strong>/</strong>14°</h5>
+                <p class="card-text">Wed</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <div class="weather-thurs">🌦</div>
+                <h5 class="card-title">21°<strong>/</strong>14°</h5>
+                <p class="card-text">Thurs</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <div class="weather-fri">⛈</div>
+                <h5 class="card-title">20°<strong>/</strong>10°</h5>
+                <p class="card-text">Fri</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 current-weather">Current weather</div>
+        <div class="col-6 forecast">5 Day Forecast</div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
